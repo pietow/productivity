@@ -37,7 +37,7 @@ RUN apt-get install python3-pip -y
 # RUN sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 #Neovim providers
 RUN pip install neovim
-RUN npm install -g neovim
+# RUN npm install -g neovim
 RUN apt-get install -y xclip
 
 FROM prime
