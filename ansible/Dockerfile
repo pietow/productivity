@@ -16,7 +16,7 @@ WORKDIR /home/piet
 
 FROM prime
 COPY . .
-RUN ansible-playbook -t node fem.yml
+RUN ansible-playbook fem.yml
 RUN cd /root && echo "alias nvim='/home/piet/./nvim.appimage --appimage-extract-and-run'" >> .bashrc && cd /home/piet
 RUN cd /root && echo "alias nvim='/home/piet/./nvim.appimage --appimage-extract-and-run'" >> .zshrc && cd /home/piet
 CMD ["sh", "-c", "ansible-playbook $TAGS local.yml"]
