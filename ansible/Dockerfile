@@ -47,8 +47,8 @@ COPY . .
 # RUN mkdir /root/.config
 # RUN git clone https://github.com/pietow/neovim-init.vim.git /root/.config/nvim
 # RUN cd ~/.config/nvim && git checkout LSP-vim && cd /home/piet
-# RUN cd /root && echo "alias nvim='/home/piet/./nvim.appimage --appimage-extract-and-run'" >> .bashrc && cd /home/piet
-# RUN cd /root && echo "alias nvim='/home/piet/./nvim.appimage --appimage-extract-and-run'" >> .zshrc && cd /home/piet
+RUN cd /root && echo "alias nvim='/home/piet/./nvim.appimage --appimage-extract-and-run'" >> .bashrc && cd /home/piet
+RUN cd /root && echo "alias nvim='/home/piet/./nvim.appimage --appimage-extract-and-run'" >> .zshrc && cd /home/piet
 #Install all nvim plugins and dependancies
 # RUN ./nvim.appimage --appimage-extract-and-run "+silent! PlugInstall!" +qall!
 # RUN ./nvim.appimage --appimage-extract-and-run "+silent! PlugInstall!" +qall! || :
