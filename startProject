@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+git init
+echo "node_modules" > .gitignore
+
