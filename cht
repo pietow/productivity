@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+languages=$(echo "javascript typescript react ejs" | tr " " "\n")
+core_utils=$(echo "find xargs sed awk" | tr " " "\n")
+selected=$(echo -e "$languages\n$core_utils" | fzf) ###runs fzf and selected line will be safed in selected
+
+read -p "Gimmie your query: " query
+
+if echo "$languages" | grep -qs $selected; then #### -q quite with zero -s no error messages; remember history | grep 'bla'???
+    # echo $(echo $query | tr ' ' '+')
+    tmux split-window -p 33 -h bash -c "curl cht.sh/$selected/$(echo "$query" | tr ' ' '+') | less"
+else 
+    tmux split-window -p 33 -h bash -c "curl cht.sh/$selected~$query | less"   ## bash -c you can pass bash commands as a string; the output is piped into less
+    # curl cht.sh/$selected~$query
+fi
