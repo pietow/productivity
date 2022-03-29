@@ -1,11 +1,13 @@
 #!/usr/bin/env bash
 
-session=$(find ~/frontEndMasters/ ~/.config/nvim/ ~/Desktop/DCI-Lectures/backend/ ~/Desktop/DCI-Lectures/backend/spielwiese/lessons/ ~/Desktop/DCI-Lectures/backend/spielwiese/lessons/backend -mindepth 1 -maxdepth 1 -type d | fzf)
+session=$(find ~/personal/ ~/.config/nvim/ ~/DCI/fullstack_submodule/ ~/DCI/fullstack_submodule/server-express/  -mindepth 1 -maxdepth 1 -type d | fzf)
 session_name=$(basename "$session" | tr . _)
 
 # if ! tmux has-session -t "$session_name" 2> /dev/null; then
 #     tmux new-session -s "$session_same" -c "$session" -d
 # fi
-
+if [ ! "$TMUX" ]; then
+        tmux 
+fi
 tmux new-session -s "$session_name" -c "$session" -d
 tmux switch-client -t "$session_name"
