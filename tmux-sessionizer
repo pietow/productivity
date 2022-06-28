@@ -5,14 +5,11 @@ source "${HOME}/personal/productivity/paths.sh" #paths
 
 pathsStr=$(join paths ' ')
 
-newArr=$(append paths bla)
-echo "${newArr}"
+session=$(find $pathsStr -mindepth 1 -maxdepth 1 -type d | fzf)
+session_name=$(basename "$session" | tr . _)
 
-# session=$(find $pathsStr -mindepth 1 -maxdepth 1 -type d | fzf)
-# session_name=$(basename "$session" | tr . _)
-
-# if [ ! "$TMUX" ]; then
-#         tmux 
-# fi
-# tmux new-session -s "$session_name" -c "$session" -d
-# tmux switch-client -t "$session_name"
+if [ ! "$TMUX" ]; then
+        tmux 
+fi
+tmux new-session -s "$session_name" -c "$session" -d
+tmux switch-client -t "$session_name"
