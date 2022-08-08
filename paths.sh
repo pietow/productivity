@@ -1,8 +1,10 @@
 paths=(~/personal/ ~/.config/nvim/ ~/DCI/ ~/DCI/fullstack_submodule/ ~/DCI/fullstack_submodule/server-express/)
 
 
-paths=(/home/dci-student/personal/ /home/dci-student/.config/nvim/ /home/dci-student/DCI/ /home/dci-student/DCI/fullstack_submodule/ /home/dci-student/DCI/fullstack_submodule/server-express/ /home/dci-student/MyProjects)
+paths=(~/personal/ ~/.config/nvim/ ~/DCI/ ~/DCI/fullstack_submodule/ ~/DCI/fullstack_submodule/server-express/ ~/MyProjects)
 
-paths=(/home/dci-student/personal/ /home/dci-student/.config/nvim/ /home/dci-student/DCI/ /home/dci-student/DCI/fullstack_submodule/ /home/dci-student/DCI/fullstack_submodule/server-express/ /home/dci-student/MyProjects /home/dci-student/MyProjects/quantra)
+paths=(~/personal/ ~/.config/nvim/ ~/DCI/ ~/DCI/fullstack_submodule/ ~/DCI/fullstack_submodule/server-express/ ~/MyProjects ~/MyProjects/quantra)
 
-paths=(/home/dci-student/personal/ /home/dci-student/.config/nvim/ /home/dci-student/DCI/ /home/dci-student/DCI/fullstack_submodule/ /home/dci-student/DCI/fullstack_submodule/server-express/ /home/dci-student/MyProjects /home/dci-student/MyProjects/quantra /home/dci-student)
+paths=(~/personal/ ~/.config/nvim/ ~/DCI/ ~/DCI/fullstack_submodule/ ~/DCI/fullstack_submodule/server-express/ ~/MyProjects ~/MyProjects/quantra ~)
+
+paths=(~/personal/ ~/.config/nvim/ ~/DCI/ ~/DCI/fullstack_submodule/ ~/DCI/fullstack_submodule/server-express/ ~/MyProjects ~/MyProjects/quantra ~ ~/personal/productivity)
